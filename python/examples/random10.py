@@ -8,6 +8,7 @@
 import time
 from neopixel import *
 import argparse
+import random
 
 # LED strip configuration:
 LED_COUNT      = 150      # Number of LED pixels.
@@ -25,9 +26,12 @@ LED_CHANNEL    = 0       # set to '1' for GPIOs 13, 19, 41, 45 or 53
 def random10(strip):
     for i in range(10):
         j = random.randint(0,149)
-        strip.setPixelColor(j,(255,255,255))
+        strip.setPixelColor(j,Color(255,255,255))
         strip.show()
     time.sleep(2)
+    for i in range(strip.numPixels()):
+	strip.setPixelColor(i,Color(0,0,0))
+	strip.show()
 
 # Main program logic follows:
 if __name__ == '__main__':
