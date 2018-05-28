@@ -30,9 +30,9 @@ def random10(strip):
         strip.show()
     time.sleep(2)
     for i in range(strip.numPixels()):
-	strip.setPixelColor(i,Color(0,0,0))
-	strip.show()
-
+	    strip.setPixelColor(i,Color(0,0,0))
+	    strip.show()
+        
 # Main program logic follows:
 if __name__ == '__main__':
     # Process arguments
