@@ -65,6 +65,7 @@ if __name__ == '__main__':
     litLEDS[1] = [2,0,0,0,255,0]
     litLEDS[2] = [4,0,0,0,0,255]
     litLEDS[3] = [0,0,1,255,0,0]
+    litLEDS[4] = [5,0,1,234,123,85]
 
     try:
         while True:
