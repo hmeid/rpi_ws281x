@@ -68,7 +68,7 @@ if __name__ == '__main__':
     litLEDS[4] = [5,0,1,234,123,85]
 
     try: 
-        cubeCorect(litLEDS)
+        cubeCorrect(litLEDS)
         while True:
             mapCube(strip, litLEDS)
 
