@@ -56,7 +56,9 @@ if __name__ == '__main__':
 
     litLEDS[0] = [0,0,0,255,0,0]
 
-    mapCube(strip, litLEDS)
+    try:
+        while True:
+            mapCube(strip, litLEDS)
 
     except KeyboardInterrupt:
         if args.clear:
