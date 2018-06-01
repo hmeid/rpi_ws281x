@@ -61,6 +61,7 @@ if __name__ == '__main__':
     cube = [[[0 for z in range (10)] for y in range (10)] for x in range (10)]
     litLEDS = [[1 for i in range (6)] for j in range (100)]
 
+    #test leds
     litLEDS[0] = [2,0,0,255,0,0]
     litLEDS[1] = [3,0,0,255,0,0]
     litLEDS[2] = [4,0,0,255,0,0]
@@ -72,8 +73,12 @@ if __name__ == '__main__':
     litLEDS[8] = [4,0,2,255,0,0]
 
     try: 
+
+        #correct for snake pattern
         cubeCorrect(litLEDS)
+
         while True:
+            #map cube
             mapCube(strip, litLEDS)
 
     except KeyboardInterrupt:
