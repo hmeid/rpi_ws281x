@@ -66,6 +66,7 @@ if __name__ == '__main__':
     litLEDS[2] = [4,0,0,0,0,255]
     litLEDS[3] = [0,0,1,255,0,0]
     litLEDS[4] = [5,0,1,234,123,85]
+    litLEDS[5] = [7,0,2,5,230,154]
 
     try: 
         cubeCorrect(litLEDS)
