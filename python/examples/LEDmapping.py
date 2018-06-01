@@ -67,9 +67,9 @@ if __name__ == '__main__':
     litLEDS[3] = [0,0,1,255,0,0]
     litLEDS[4] = [5,0,1,234,123,85]
 
-    try:
+    try: 
+        cubeCorect(litLEDS)
         while True:
-            cubeCorrect(litLEDS)
             mapCube(strip, litLEDS)
 
     except KeyboardInterrupt:
