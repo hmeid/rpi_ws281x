@@ -61,12 +61,15 @@ if __name__ == '__main__':
     cube = [[[0 for z in range (10)] for y in range (10)] for x in range (10)]
     litLEDS = [[1 for i in range (6)] for j in range (100)]
 
-    litLEDS[0] = [0,0,0,255,0,0]
-    litLEDS[1] = [2,0,0,0,255,0]
-    litLEDS[2] = [4,0,0,0,0,255]
-    litLEDS[3] = [0,0,1,255,0,0]
-    litLEDS[4] = [5,0,1,234,123,85]
-    litLEDS[5] = [7,0,2,5,230,154]
+    litLEDS[0] = [2,0,0,255,0,0]
+    litLEDS[1] = [3,0,0,255,0,0]
+    litLEDS[2] = [4,0,0,255,0,0]
+    litLEDS[3] = [5,0,0,255,0,0]
+    litLEDS[4] = [6,0,0,255,0,0]
+    litLEDS[5] = [3,0,1,255,0,0]
+    litLEDS[6] = [4,0,1,0,255,0]
+    litLEDS[7] = [5,0,1,255,0,0]
+    litLEDS[8] = [4,0,2,255,0,0]
 
     try: 
         cubeCorrect(litLEDS)
