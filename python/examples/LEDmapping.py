@@ -57,6 +57,7 @@ if __name__ == '__main__':
     litLEDS[0] = [0,0,0,255,0,0]
     litLEDS[1] = [2,0,0,0,255,0]
     litLEDS[2] = [4,0,0,0,0,255]
+    litLEDS[3] = [0,1,0,255,0,0]
 
     try:
         mapCube(strip, litLEDS)
