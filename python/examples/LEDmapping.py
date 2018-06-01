@@ -25,8 +25,9 @@ def colorWipe(strip, color, wait_ms=50):
 def cubeCorrect(litLEDS):
     for i in range(LIT_LEDS):
         led = 100*litLEDS[i][1] + 10*litLEDS[i][2] + litLEDS[i][0]
-        if((led % (2*CUBE_DIM)) >= CUBE_DIM):
-            litLEDS[i][0] = -1*((CUBE_DIM - 1) - litLEDS[i][0])
+        x = led % (2*CUBE_DIM)
+        if( x >= CUBE_DIM):
+            litLEDS[i][0] += -1*(x - (CUBE_DIM - 1))
 
 def mapCube(strip, litLEDS):
     """use litLEDinfo to light necessary LEDs"""
@@ -66,8 +67,9 @@ if __name__ == '__main__':
     litLEDS[3] = [0,0,1,255,0,0]
 
     try:
-        cubeCorrect(litLEDS)
-        mapCube(strip, litLEDS)
+        while True:
+            cubeCorrect(litLEDS)
+            mapCube(strip, litLEDS)
 
     except KeyboardInterrupt:
         if args.clear:
