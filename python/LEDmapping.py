@@ -26,7 +26,7 @@ def cubeCorrect(litLEDS):
     for i in range(LIT_LEDS):
         led = 100*litLEDS[i][1] + 10*litLEDS[i][2] + litLEDS[i][0]
         x = led % (2*CUBE_DIM)
-        if( x >= CUBE_DIM):
+        if( x < CUBE_DIM):
             litLEDS[i][0] = (-1)*((x - CUBE_DIM) - (CUBE_DIM - 1))
 
 def mapCube(strip, litLEDS):
