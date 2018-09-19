@@ -35,11 +35,12 @@ def mapCube(strip, litLEDS):
     for i in range(LIT_LEDS):
         led = 100*litLEDS[i][1] + 10*litLEDS[i][2] + litLEDS[i][0]
 
-        y = led % (2*CUBE_DIM*CUBE_DIM)
-        if( y >= CUBE_DIM*CUBE_DIM):
-            y %= (CUBE_DIM*CUBE_DIM)
-            y //= CUBE_DIM
-            led -= (((2*y)+1)*10)
+        if(led>99):
+            y = (led + 100) % (2*CUBE_DIM*CUBE_DIM)
+            if( y >= CUBE_DIM*CUBE_DIM):
+                y %= (CUBE_DIM*CUBE_DIM)
+                y //= CUBE_DIM
+                led -= (((2*y)+1)*10)
 
         color = Color(litLEDS[i][4], litLEDS[i][3], litLEDS[i][5])
         strip.setPixelColor(led, color)
@@ -70,13 +71,13 @@ if __name__ == '__main__':
 
     #test leds
     litLEDS[0] = [2,0,0,255,0,0]
-    litLEDS[1] = [3,0,0,255,0,0]
+    litLEDS[1] = [3,1,0,255,0,0]
     litLEDS[2] = [4,0,0,255,0,0]
     litLEDS[3] = [5,0,0,255,0,0]
     litLEDS[4] = [6,0,0,255,0,0]
-    litLEDS[5] = [3,0,1,255,0,0]
+    litLEDS[5] = [3,1,1,255,0,0]
     litLEDS[6] = [4,0,1,0,0,0]
-    litLEDS[7] = [5,0,1,255,0,0]
+    litLEDS[7] = [5,1,1,255,0,0]
     litLEDS[8] = [4,0,2,255,0,0]
 
     try: 
